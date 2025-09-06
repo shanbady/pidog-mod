@@ -221,7 +221,7 @@ class Pidog():
         try:
             debug("rgb_strip init ... ", end='', flush=True)
             self.rgb_thread_run = True
-            self.rgb_strip = RGBStrip(addr=0X74, nums=11)
+            self.rgb_strip = RGBStrip(addr=0X77, nums=11)
             self.rgb_strip.set_mode('breath', 'black')
             self.rgb_fail_count = 0
             # add rgb thread
