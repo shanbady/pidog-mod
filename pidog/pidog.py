@@ -634,8 +634,12 @@ class Pidog:
     def sensory_process_work(self, distance_addr, lock):
         try:
             debug("ultrasonic init ... ", end="", flush=True)
+            """
             echo = Pin("D0")
             trig = Pin("D1")
+            """
+            echo = Pin("D14")  # GPIO 26
+            trig = Pin("D15")  # GPIO 20
             self.ultrasonic = Ultrasonic(trig, echo, timeout=0.017)
             # add ultrasonic thread
             self.thread_list.append("ultrasonic")
